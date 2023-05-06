@@ -1,0 +1,508 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+*/
+
+/* 
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông, ...) */
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mt-64 {
+    margin-top: 64px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-third {
+    width: calc(100% / 3);
+}
+
+.col-half {
+    width: calc(100% / 2);
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 15px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: black;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav li {
+    display: inline-block;
+}
+
+#nav li a {
+    color: white;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 5px 24px;
+    display: block;
+    text-transform: uppercase;
+}
+
+#nav li:hover a,
+#nav .subnav > li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    position: absolute;
+    min-width: 160px;
+    display: none;
+    box-shadow: 0 0 10px rgba(59, 58, 58, 0.3);
+}
+
+#nav >li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav li {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 0;
+}
+
+#nav .subnav li a {
+    display: block;
+    background-color: white;
+    color: black;
+    text-transform: none;
+    padding: 0 12px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+    padding: 0 2px;
+    font-weight: bold;
+}
+
+#header .menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .menu-btn,
+#header .search-btn {
+    float: right;
+    line-height: 46px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+#header .menu-btn:hover {
+    background-color: #fff;
+}
+
+#header .menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: #fff;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('../img/slider/slider1.jpg') top center /cover no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    color: #fff;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 2px #000;
+}
+
+#slider .content-heading {
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    max-width: 100%;
+}
+
+#content .section-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 64px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500; 
+    letter-spacing: 3px;
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.6;
+    font-style: italic;
+    margin: 25px 0;
+}
+
+#content .about-section {
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .member-section {
+    margin: 32px 0;
+}
+
+#content .member-ava {
+    margin-top: 15px;
+    border-radius: 4px;
+    width: 154px;
+}
+
+.tour-section {
+    margin-top: 64px;
+    padding-bottom: 64px;
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: white;
+    margin-top: 40px;
+}
+
+.tickets-list li {
+    color: #757575;
+    list-style: none;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color:#fff;
+    opacity: none;
+    margin-left: 16px;
+    padding: 2px 8px;
+}
+
+.tickets-list .quantity {
+    width: 24px;
+    height: 24px;
+    float: right;
+    color: white;
+    background-color: #000;
+    border-radius: 50%;
+    margin-top: -2px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.place-section {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+.place-image {
+    width: 100%;
+    display: block;
+}
+
+.place-image:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 15px 16px;
+    background-color: #fff;
+}
+
+.place-name {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.place-time {
+    opacity: 0.6;
+    margin: 15px 0;
+}
+
+.place-description {
+    line-height: 1.4;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-container {
+    position: relative;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    background-color: #fff;
+    animation: modal_fade_in ease 0.3s;
+}
+
+.modal-icon {
+    float: right;
+    padding: 16px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modal-icon:hover {
+    opacity: 0.8;
+}
+
+.modal-header {
+    background-color: #009688;
+}
+
+.modal-ticket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-type {
+    margin: 16px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-buy {
+    margin-bottom: 16px;
+}
+
+.modal-cart {
+    display: block;
+}
+
+.how-many, .send-to {
+    font-size: 15px;
+    width: 100%;
+    padding: 8px;
+    margin-top: 12px;
+}
+
+.modal-pay {
+    padding: 16px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    margin: 16px 0;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modal-pay:hover {
+    opacity: 0.9;
+}
+
+.modal-help {
+    float: right;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.modal-help a {
+    color:#2196F3;
+}
+
+@keyframes modal_fade_in {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info a:hover {
+    opacity: 0.7;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.image-section img{
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 16px;
+}
+
+#footer .social-list {
+    font-size: 24px;
+}
+
+#footer .social-list a {
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover, 
+#footer .social-list a:hover {
+    opacity: 0.8;
+}
+
+#footer .copyright {
+    font-size: 15px;
+    color: rgba(0,0,0,0.6);
+    font-family: sans-serif;
+}
+
+#footer .copyright a {
+    color: rgba(0,0,0,0.6);
+}
